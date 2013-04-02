@@ -41,7 +41,7 @@ echo "-----------<br>";
 echo "Let's connect to db slave and show version:<br>";
 
 $con2 = pg_connect("host=$slavehost dbname=$db user=$user password=$pass")
-    or die ("Could not connect to master server\n"); 
+    or die ("Could not connect to slave server\n"); 
     
 
 //show db server version
@@ -52,7 +52,7 @@ $row3 = pg_fetch_row($rs2);
 echo $row3[0] . "\n";
 
 echo "<p>-----------<br>";
-echo "Let's retrieve some data from the db master and print it out:<br>";
+echo "Let's retrieve some data from the db slave and print it out:<br>";
 
 // execute query
 $sql2 = "SELECT * FROM Cars";
