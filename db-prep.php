@@ -1,9 +1,5 @@
-<?php 
-
-$host = $_ENV["DBHOST"];
-$user = $_ENV["DBUSER"];
-$pass = $_ENV["DBPASS"];
-$db = $_ENV["DBNAME"]; 
+<?php
+include '../dbconfig.php';
 
 
 $con = pg_connect("host=$host dbname=$db user=$user password=$pass")
