@@ -1,6 +1,12 @@
 <?php
 include '../dbconfig.php';
 
+$con = pg_connect("host=$host dbname=template1 user=$user password=$pass")
+    or die ("Could not connect to server\n"); 
+    
+$query = "CREATE DATABASE " . $db . ";"; 
+pg_query($con, $query) or die("Cannot execute query: $query\n"); 
+    
 
 $con = pg_connect("host=$host dbname=$db user=$user password=$pass")
     or die ("Could not connect to server\n"); 
