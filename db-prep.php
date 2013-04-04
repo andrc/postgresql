@@ -37,4 +37,6 @@ pg_query($con, $query) or die("Cannot execute query: $query\n");
 
 pg_close($con); 
 
+echo 'I have prepared the sample table!';
+
 ?>
