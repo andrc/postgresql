@@ -2,8 +2,8 @@
 include '../dbconfig.php';
 
 echo "postgresql demo <p>";
-
-echo "-----------<br>";
+echo  "You have reached server:" . $_SERVER['SERVER_NAME'] . " " . $_SERVER['SERVER_ADDR'];
+echo "<p>-----------<br>";
 echo "Let's connect to db master and show version:<br>";
 
 $con = pg_connect("host=$host dbname=$db user=$user password=$pass")
